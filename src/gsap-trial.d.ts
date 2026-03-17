@@ -16,7 +16,7 @@ declare module 'gsap-trial/SplitText' {
 declare module 'gsap-trial/ScrollSmoother' {
   export class ScrollSmoother {
     static create(vars?: any): ScrollSmoother;
-    refresh(): void;
+    refresh(reset?: boolean): void;
     scrollTop(position?: number): number | void;
     progress(progress: number): number | void;
     disable(reset?: boolean): void;
@@ -27,6 +27,8 @@ declare module 'gsap-trial/ScrollSmoother' {
     content(): HTMLElement;
     wrapper(): HTMLElement;
     smoothScroll(amount: number, duration?: number): void;
+    paused(state?: boolean): void;
+    scrollTo(target: any, smooth?: boolean, position?: string): void;
   }
 }
 
