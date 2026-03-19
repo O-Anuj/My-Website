@@ -36,6 +36,7 @@ const Navbar = () => {
       });
     });
     window.addEventListener("resize", () => {
+      // @ts-ignore
       ScrollSmoother.refresh(true);
     });
   }, []);
